@@ -1,0 +1,413 @@
+# Java OOP Learning Pack
+## 20 Java Practice Exercises with Solutions
+
+### Exercise 1: Create a Class
+**Question:** Create a `Student` class with a `display()` method.
+
+**Solution:**
+```java
+class Student {
+    void display() {
+        System.out.println("Student details");
+    }
+
+    public static void main(String[] args) {
+        new Student().display();
+    }
+}
+```
+**Output:** `Student details`
+
+### Exercise 2: Create an Object
+**Question:** Create a `Car` object and display a message.
+
+**Solution:**
+```java
+class Car {
+    public static void main(String[] args) {
+        Car c = new Car();
+        System.out.println("Car object created");
+    }
+}
+```
+**Output:** `Car object created`
+
+### Exercise 3: Use a Constructor
+**Question:** Initialise a student's name using a constructor.
+
+**Solution:**
+```java
+class Student {
+    String name;
+
+    Student(String n) {
+        name = n;
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student("Arun");
+        System.out.println(s.name);
+    }
+}
+```
+**Output:** `Arun`
+
+### Exercise 4: Demonstrate Encapsulation
+**Question:** Use a private variable and a getter method.
+
+**Solution:**
+```java
+class Account {
+    private int balance = 500;
+
+    int getBalance() {
+        return balance;
+    }
+
+    public static void main(String[] args) {
+        Account a = new Account();
+        System.out.println(a.getBalance());
+    }
+}
+```
+**Output:** `500`
+
+### Exercise 5: Demonstrate Inheritance
+**Question:** Create a `Dog` class that inherits from `Animal`.
+
+**Solution:**
+```java
+class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    public static void main(String[] args) {
+        new Dog().eat();
+    }
+}
+```
+**Output:** `Eating`
+
+### Exercise 6: Method Overloading
+**Question:** Create two `add()` methods with different parameter lists.
+
+**Solution:**
+```java
+class Add {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Add a = new Add();
+        System.out.println(a.add(2, 3));
+        System.out.println(a.add(1, 2, 3));
+    }
+}
+```
+**Output:**
+```text
+5
+6
+```
+
+### Exercise 7: Method Overriding
+**Question:** Override a method in a subclass.
+
+**Solution:**
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+
+    public static void main(String[] args) {
+        new Dog().sound();
+    }
+}
+```
+**Output:** `Bark`
+
+### Exercise 8: Demonstrate Abstraction
+**Question:** Create an abstract class with an abstract method.
+
+**Solution:**
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing circle");
+    }
+
+    public static void main(String[] args) {
+        new Circle().draw();
+    }
+}
+```
+**Output:** `Drawing circle`
+
+### Exercise 9: Implement an Interface
+**Question:** Implement a `Printable` interface.
+
+**Solution:**
+```java
+interface Printable {
+    void print();
+}
+
+class Book implements Printable {
+    public void print() {
+        System.out.println("Printing book");
+    }
+
+    public static void main(String[] args) {
+        new Book().print();
+    }
+}
+```
+**Output:** `Printing book`
+
+### Exercise 10: Use the `this` Keyword
+**Question:** Use `this` to distinguish a field from a parameter.
+
+**Solution:**
+```java
+class Student {
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new Student("Priya").name);
+    }
+}
+```
+**Output:** `Priya`
+
+### Exercise 11: Use the `super` Keyword
+**Question:** Call a parent-class method using `super`.
+
+**Solution:**
+```java
+class Parent {
+    void show() {
+        System.out.println("Parent");
+    }
+}
+
+class Child extends Parent {
+    void display() {
+        super.show();
+    }
+
+    public static void main(String[] args) {
+        new Child().display();
+    }
+}
+```
+**Output:** `Parent`
+
+### Exercise 12: Use a Static Variable
+**Question:** Display a static variable.
+
+**Solution:**
+```java
+class Counter {
+    static int count = 10;
+
+    public static void main(String[] args) {
+        System.out.println(Counter.count);
+    }
+}
+```
+**Output:** `10`
+
+### Exercise 13: Use a Final Variable
+**Question:** Declare and display a constant using `final`.
+
+**Solution:**
+```java
+class Example {
+    public static void main(String[] args) {
+        final int VALUE = 100;
+        System.out.println(VALUE);
+    }
+}
+```
+**Output:** `100`
+
+### Exercise 14: Use a Private Method
+**Question:** Call a private method from within its class.
+
+**Solution:**
+```java
+class Demo {
+    private void message() {
+        System.out.println("Private method");
+    }
+
+    public static void main(String[] args) {
+        new Demo().message();
+    }
+}
+```
+**Output:** `Private method`
+
+### Exercise 15: Demonstrate Runtime Polymorphism
+**Question:** Use a parent reference to refer to a subclass object.
+
+**Solution:**
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Meow");
+    }
+
+    public static void main(String[] args) {
+        Animal a = new Cat();
+        a.sound();
+    }
+}
+```
+**Output:** `Meow`
+
+### Exercise 16: Demonstrate Association
+**Question:** Pass a `Teacher` object to a `Student` method.
+
+**Solution:**
+```java
+class Teacher {
+    void teach() {
+        System.out.println("Teaching");
+    }
+}
+
+class Student {
+    void learn(Teacher t) {
+        t.teach();
+    }
+
+    public static void main(String[] args) {
+        new Student().learn(new Teacher());
+    }
+}
+```
+**Output:** `Teaching`
+
+### Exercise 17: Demonstrate Aggregation
+**Question:** Pass an existing `Teacher` object to a `Department`.
+
+**Solution:**
+```java
+class Teacher {
+    String name = "Ravi";
+}
+
+class Department {
+    Teacher teacher;
+
+    Department(Teacher t) {
+        teacher = t;
+    }
+
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        Department d = new Department(t);
+        System.out.println(d.teacher.name);
+    }
+}
+```
+**Output:** `Ravi`
+
+### Exercise 18: Demonstrate Composition
+**Question:** Create an `Engine` inside a `Car`.
+
+**Solution:**
+```java
+class Engine {
+    void start() {
+        System.out.println("Engine started");
+    }
+}
+
+class Car {
+    private final Engine engine = new Engine();
+
+    public static void main(String[] args) {
+        new Car().engine.start();
+    }
+}
+```
+**Output:** `Engine started`
+
+### Exercise 19: Use a List of Objects
+**Question:** Store two student names in an `ArrayList`.
+
+**Solution:**
+```java
+import java.util.ArrayList;
+
+class Students {
+    public static void main(String[] args) {
+        ArrayList<String> names = new ArrayList<>();
+        names.add("Arun");
+        names.add("Priya");
+        System.out.println(names);
+    }
+}
+```
+**Output:** `[Arun, Priya]`
+
+### Exercise 20: Create a Simple OOP Application
+**Question:** Create a `Book` class with a title and a method to display it.
+
+**Solution:**
+```java
+class Book {
+    String title;
+
+    Book(String title) {
+        this.title = title;
+    }
+
+    void display() {
+        System.out.println(title);
+    }
+
+    public static void main(String[] args) {
+        Book b = new Book("Java Basics");
+        b.display();
+    }
+}
+```
+**Output:** `Java Basics`
+
+## Conclusion
+
+These 20 exercises provide practice with classes, objects, constructors, encapsulation, inheritance, polymorphism, abstraction, interfaces, object relationships, and Java collections. Students should compile and run each solution and try modifying the examples independently.

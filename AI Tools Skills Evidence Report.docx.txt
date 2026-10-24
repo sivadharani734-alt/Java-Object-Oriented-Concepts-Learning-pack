@@ -1,0 +1,52 @@
+# AI Tools and Skills Evidence Report
+
+## 1. Project Title
+**Java Object-Oriented Concepts Learning Pack**
+
+## 2. Objective
+The objective of this project is to help beginners understand Java Object-Oriented Programming concepts through notes, programs, diagrams, exercises, and quizzes with the support of AI tools.
+
+## 3. AI Tools Used
+
+| S.No. | AI Tool | Purpose |
+|---|---|---|
+| 1 | ChatGPT | Generate explanations, Java examples, exercises, and quizzes |
+| 2 | Google Gemini | Research and compare explanations |
+| 3 | Canva AI | Help design presentation slides, if used |
+| 4 | Gamma AI | Help create presentations, if used |
+
+## 4. AI Skills Demonstrated
+
+1. **Prompt Engineering:** Writing clear prompts to generate useful learning materials.
+2. **AI Research:** Finding information about Java OOP concepts.
+3. **Content Generation:** Preparing notes, examples, and study materials.
+4. **Code Assistance:** Creating and understanding Java programs.
+5. **Diagram Assistance:** Preparing UML class diagram examples.
+6. **Content Verification:** Checking generated information against reliable Java documentation.
+
+## 5. Project Deliverables
+
+- Java OOP research report.
+- OOP concepts checklist.
+- Notes covering eight OOP concepts.
+- Java common mistakes guide.
+- Ten Java programs with UML diagrams.
+- Twenty exercises with solutions.
+- Fifteen-question quiz and answer key.
+- Seven-slide project presentation.
+- Exercise template generation Python script.
+
+## 6. Verification and Responsible AI Use
+
+- Review AI-generated content before submission.
+- Check Java syntax and outputs by running programs.
+- Compare explanations with official Java documentation.
+- Correct errors and remove unsupported claims.
+- Do not present untested code as verified.
+- Keep evidence of the prompts and outputs actually used.
+
+## 7. Conclusion
+
+AI tools supported the preparation of learning materials for the Java Object-Oriented Concepts Learning Pack. The project combines research, programming examples, exercises, assessment questions, and presentation materials to support beginner learning.
+
+**Evidence to attach:** Screenshots of prompts, AI-generated outputs, code execution, and presentation slides from tools actually used.

@@ -1,0 +1,125 @@
+# Java OOP Learning Pack
+## Common Java Programming Mistakes and Their Solutions
+
+### 1. Class Name and File Name Mismatch
+
+**Mistake:** Saving a public class under a different file name.
+
+**Incorrect example:**
+```java
+// File name: Student.java
+public class Teacher {
+}
+```
+
+**Solution:** Save the file as `Teacher.java` or change the public class name to `Student`.
+
+### 2. Missing Semicolon
+
+**Mistake:** Forgetting a semicolon at the end of a statement.
+
+**Incorrect:**
+```java
+System.out.println("Hello")
+```
+
+**Correct:**
+```java
+System.out.println("Hello");
+```
+
+### 3. Incorrect Object Creation
+
+**Mistake:** Trying to use an object without creating it.
+
+**Incorrect:**
+```java
+Student s;
+s.display();
+```
+
+**Correct:**
+```java
+Student s = new Student();
+s.display();
+```
+
+The correct example assumes that `Student` has a suitable constructor and a `display()` method.
+
+### 4. Accessing Private Variables Directly
+
+**Mistake:** Accessing a private variable outside its class.
+
+**Incorrect:**
+```java
+class Student {
+    private int mark = 90;
+}
+```
+
+Trying to access `s.mark` from another class causes a compilation error.
+
+**Solution:** Provide a suitable public method, such as a getter, to read the value.
+
+### 5. Confusing Overloading and Overriding
+
+**Mistake:** Thinking that overloading and overriding are the same.
+
+**Solution:**
+- Overloading: Same method name with different parameter lists.
+- Overriding: A subclass provides a compatible implementation of an inherited instance method.
+
+### 6. Incorrect Use of Inheritance
+
+**Mistake:** Extending a class just to reuse a method when there is no genuine “is-a” relationship.
+
+**Solution:** Use inheritance for suitable “is-a” relationships. Consider composition when one object should contain or use another object.
+
+### 7. Forgetting to Implement an Abstract Method
+
+**Mistake:** A concrete subclass fails to implement an inherited abstract method.
+
+**Solution:** Implement all required abstract methods or declare the subclass abstract.
+
+### 8. Incorrect Method Overriding
+
+**Mistake:** Changing the parameter list and assuming the method overrides the parent method.
+
+**Solution:** Use the `@Override` annotation. The compiler can then help detect mistakes.
+
+### 9. Null Pointer Exception
+
+**Mistake:** Calling a method through a reference whose value is `null`.
+
+**Incorrect:**
+```java
+Student s = null;
+s.display();
+```
+
+**Solution:** Initialise the reference with a valid object before using it, or handle the possibility of `null`.
+
+### 10. Not Testing the Program
+
+**Mistake:** Assuming the program works because the code looks correct.
+
+**Solution:**
+1. Compile the program.
+2. Run it.
+3. Compare the actual output with the expected output.
+4. Test normal and boundary cases.
+5. Fix errors and test again.
+
+## Best Practices
+
+- Use meaningful class, method, and variable names.
+- Follow Java naming conventions.
+- Keep fields private when appropriate.
+- Use constructors to initialise objects.
+- Add comments where they improve understanding.
+- Test each program before submitting it.
+- Verify AI-generated code instead of accepting it blindly.
+
+## Conclusion
+
+Understanding common mistakes helps beginners write correct, readable, and maintainable Java programs. Regular practice, compilation, and testing improve programming skills.

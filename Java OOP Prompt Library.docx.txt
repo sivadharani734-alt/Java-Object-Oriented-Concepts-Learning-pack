@@ -1,0 +1,64 @@
+# Java OOP Learning Pack — Prompt Library
+
+## 1. Research Prompt
+**Prompt:**
+
+"Explain Java Object-Oriented Programming for beginners. Cover classes, objects, encapsulation, inheritance, polymorphism, abstraction, association, aggregation, and composition. Use simple English, real-life examples, and reliable references. Do not invent sources."
+
+## 2. OOP Notes Prompt
+**Prompt:**
+
+"Prepare beginner-friendly notes on the eight major Java OOP concepts. For each concept, provide a definition, real-life analogy, simple Java example, and key points for revision."
+
+## 3. Java Program Generation Prompt
+**Prompt:**
+
+"Write a simple Java program to demonstrate [OOP concept]. Include the aim, algorithm, complete code, sample output, and result. Explain the code line by line for a beginner."
+
+## 4. UML Diagram Prompt
+**Prompt:**
+
+"Create a simple UML class diagram for a Java program demonstrating [OOP concept]. Show class names, attributes, methods, and relationships. Explain the diagram in simple English."
+
+## 5. Exercise Creation Prompt
+**Prompt:**
+
+"Generate five Java OOP practice exercises for beginners about [topic]. Arrange them from easy to moderate. Include problem statements, expected outputs, hints, and solutions in a separate section."
+
+## 6. Quiz Creation Prompt
+**Prompt:**
+
+"Create 15 multiple-choice questions about Java OOP for beginners. Give four options for each question, provide an answer key at the end, and briefly explain the correct answers."
+
+## 7. Common Mistakes Prompt
+**Prompt:**
+
+"List common mistakes beginners make when learning Java OOP. For each mistake, show incorrect code, corrected code, and a short explanation."
+
+## 8. Code Verification Prompt
+**Prompt:**
+
+"Review the following Java program for syntax errors, logical errors, and OOP concept mistakes. Explain each issue and provide corrected code. Do not claim the code was executed unless it actually was."
+
+## 9. Presentation Creation Prompt
+**Prompt:**
+
+"Create a seven-slide presentation about my Java Object-Oriented Concepts Learning Pack. Include the problem statement, proposed solution, eight OOP concepts, key features, tools, learning benefits, and conclusion. Use short bullet points and beginner-friendly language."
+
+## 10. Content Improvement Prompt
+**Prompt:**
+
+"Review the following Java learning material for grammar, clarity, technical accuracy, and beginner-friendliness. Identify unsupported statements and suggest improvements without changing the intended meaning."
+
+## 11. AI Comparison Prompt
+**Prompt:**
+
+"Explain Java inheritance using the same example in two different ways: a simple beginner explanation and a technical explanation. Compare the clarity and accuracy of both. Verify important technical details using official Java documentation."
+
+## 12. Final Project Review Prompt
+**Prompt:**
+
+"Review my Java OOP Learning Pack against its project requirements. Identify completed items, missing items, errors, and improvements. Use evidence from the files I provide, and do not assume a task is completed without evidence."
+
+## Conclusion
+This prompt library provides reusable instructions for researching, explaining, coding, assessing, and verifying Java OOP learning materials. Prompts should be adjusted to suit the task, and all generated content should be reviewed before submission.

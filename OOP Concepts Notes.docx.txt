@@ -1,0 +1,252 @@
+# Java OOP Learning Pack
+## Eight OOP Concepts with Real-Life Examples
+
+### 1. Class and Object
+
+**Definition:** A class is a blueprint for creating objects. An object is an instance of a class.
+
+**Real-life example:** A house plan is a class, while the actual houses built using that plan are objects.
+
+**Java example:**
+```java
+class Student {
+    String name = "Arun";
+
+    void display() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+```
+
+**Output:**
+```text
+Arun
+```
+
+### 2. Encapsulation
+
+**Definition:** Encapsulation combines data and methods in a class and controls access to the data.
+
+**Real-life example:** An ATM lets users perform banking operations without directly accessing the bank's internal systems.
+
+**Java example:**
+```java
+class BankAccount {
+    private int balance = 1000;
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount();
+        System.out.println(account.getBalance());
+    }
+}
+```
+
+**Output:**
+```text
+1000
+```
+
+### 3. Inheritance
+
+**Definition:** Inheritance allows a class to inherit accessible members from another class.
+
+**Real-life example:** A car is a type of vehicle and shares common vehicle characteristics.
+
+**Java example:**
+```java
+class Vehicle {
+    void move() {
+        System.out.println("Vehicle is moving");
+    }
+}
+
+class Car extends Vehicle {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.move();
+    }
+}
+```
+
+**Output:**
+```text
+Vehicle is moving
+```
+
+### 4. Polymorphism
+
+**Definition:** Polymorphism allows the same method name or interface to represent different behaviours.
+
+**Real-life example:** A person can use the same phone for calling, messaging, and browsing.
+
+**Java example:**
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(2, 3));
+        System.out.println(c.add(2, 3, 4));
+    }
+}
+```
+
+**Output:**
+```text
+5
+9
+```
+
+This example demonstrates method overloading, a form of compile-time polymorphism.
+
+### 5. Abstraction
+
+**Definition:** Abstraction exposes essential functionality while hiding implementation details.
+
+**Real-life example:** A person drives a car using its controls without needing to understand every internal engine mechanism.
+
+**Java example:**
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        c.draw();
+    }
+}
+```
+
+**Output:**
+```text
+Drawing a circle
+```
+
+### 6. Association
+
+**Definition:** Association represents a relationship between two independent classes or objects.
+
+**Real-life example:** A teacher teaches students. Both teachers and students can exist independently.
+
+**Java example:**
+```java
+class Teacher {
+    void teach() {
+        System.out.println("Teacher is teaching");
+    }
+}
+
+class Student {
+    void learn(Teacher t) {
+        t.teach();
+    }
+
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        Student s = new Student();
+        s.learn(t);
+    }
+}
+```
+
+**Output:**
+```text
+Teacher is teaching
+```
+
+### 7. Aggregation
+
+**Definition:** Aggregation is a whole-part relationship in which the parts can exist independently of the whole.
+
+**Real-life example:** A department has teachers, but teachers can continue to exist even if the department is reorganised.
+
+**Java example:**
+```java
+class Teacher {
+    String name;
+
+    Teacher(String name) {
+        this.name = name;
+    }
+}
+
+class Department {
+    Teacher teacher;
+
+    Department(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    public static void main(String[] args) {
+        Teacher t = new Teacher("Ravi");
+        Department d = new Department(t);
+        System.out.println(d.teacher.name);
+    }
+}
+```
+
+**Output:**
+```text
+Ravi
+```
+
+### 8. Composition
+
+**Definition:** Composition is a strong whole-part relationship in which a component is owned and managed as part of a larger object.
+
+**Real-life example:** A computer contains components such as a motherboard that are managed as part of its overall design.
+
+**Java example:**
+```java
+class Engine {
+    void start() {
+        System.out.println("Engine started");
+    }
+}
+
+class Car {
+    private final Engine engine = new Engine();
+
+    void startCar() {
+        engine.start();
+    }
+
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.startCar();
+    }
+}
+```
+
+**Output:**
+```text
+Engine started
+```
+
+This example illustrates ownership through object creation inside the `Car` class.
+
+## Conclusion
+
+The eight concepts help students understand object-oriented design in Java. Classes and objects form the foundation, while encapsulation, inheritance, polymorphism, and abstraction are core OOP principles. Association, aggregation, and composition describe relationships between objects.

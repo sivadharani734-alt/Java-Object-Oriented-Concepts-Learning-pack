@@ -1,0 +1,383 @@
+# Java OOP Learning Pack
+## 10 Java Programs with UML Class Diagrams
+
+### Program 1: Class and Object
+
+**Aim:** To create a class and object in Java.
+
+**UML Diagram:**
+```text
++----------------------+
+|       Student        |
++----------------------+
+| + name: String       |
++----------------------+
+| + display(): void    |
++----------------------+
+```
+
+**Java Program:**
+```java
+class Student {
+    String name = "Arun";
+
+    void display() {
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}
+```
+
+**Output:** `Arun`
+
+### Program 2: Encapsulation
+
+**Aim:** To demonstrate private data and a public getter.
+
+**UML Diagram:**
+```text
++-------------------------+
+|       BankAccount       |
++-------------------------+
+| - balance: int          |
++-------------------------+
+| + getBalance(): int     |
++-------------------------+
+```
+
+**Java Program:**
+```java
+class BankAccount {
+    private int balance = 1000;
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public static void main(String[] args) {
+        BankAccount b = new BankAccount();
+        System.out.println(b.getBalance());
+    }
+}
+```
+
+**Output:** `1000`
+
+### Program 3: Single Inheritance
+
+**Aim:** To demonstrate inheritance.
+
+**UML Diagram:**
+```text
++----------------+
+|    Vehicle     |
++----------------+
+| + move(): void |
++----------------+
+        ▲
+        |
++----------------+
+|      Car       |
++----------------+
+|                |
++----------------+
+```
+
+**Java Program:**
+```java
+class Vehicle {
+    void move() {
+        System.out.println("Moving");
+    }
+}
+
+class Car extends Vehicle {
+    public static void main(String[] args) {
+        new Car().move();
+    }
+}
+```
+
+**Output:** `Moving`
+
+### Program 4: Method Overloading
+
+**Aim:** To demonstrate compile-time polymorphism.
+
+**UML Diagram:**
+```text
++------------------------+
+|      Calculator        |
++------------------------+
+| + add(int,int): int    |
+| + add(int,int,int): int|
++------------------------+
+```
+
+**Java Program:**
+```java
+class Calculator {
+    int add(int a, int b) {
+        return a + b;
+    }
+
+    int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        System.out.println(c.add(2, 3));
+        System.out.println(c.add(2, 3, 4));
+    }
+}
+```
+
+**Output:**
+```text
+5
+9
+```
+
+### Program 5: Method Overriding
+
+**Aim:** To demonstrate runtime polymorphism.
+
+**UML Diagram:**
+```text
++------------------+
+|      Animal      |
++------------------+
+| + sound(): void  |
++------------------+
+         ▲
+         |
++------------------+
+|        Dog       |
++------------------+
+| + sound(): void  |
++------------------+
+```
+
+**Java Program:**
+```java
+class Animal {
+    void sound() {
+        System.out.println("Animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Bark");
+    }
+
+    public static void main(String[] args) {
+        Animal a = new Dog();
+        a.sound();
+    }
+}
+```
+
+**Output:** `Bark`
+
+### Program 6: Abstraction
+
+**Aim:** To demonstrate an abstract class.
+
+**UML Diagram:**
+```text
++----------------------+
+|    <<abstract>>      |
+|        Shape         |
++----------------------+
+| + draw(): void       |
++----------------------+
+           ▲
+           |
++----------------------+
+|        Circle        |
++----------------------+
+| + draw(): void       |
++----------------------+
+```
+
+**Java Program:**
+```java
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    void draw() {
+        System.out.println("Circle");
+    }
+
+    public static void main(String[] args) {
+        new Circle().draw();
+    }
+}
+```
+
+**Output:** `Circle`
+
+### Program 7: Interface
+
+**Aim:** To demonstrate an interface implementation.
+
+**UML Diagram:**
+```text
++----------------------+
+| <<interface>>        |
+|       Printable      |
++----------------------+
+| + print(): void      |
++----------------------+
+           ▲
+           | implements
++----------------------+
+|       Document       |
++----------------------+
+| + print(): void      |
++----------------------+
+```
+
+**Java Program:**
+```java
+interface Printable {
+    void print();
+}
+
+class Document implements Printable {
+    public void print() {
+        System.out.println("Printing document");
+    }
+
+    public static void main(String[] args) {
+        new Document().print();
+    }
+}
+```
+
+**Output:** `Printing document`
+
+### Program 8: Association
+
+**Aim:** To demonstrate a relationship between independent objects.
+
+**UML Diagram:**
+```text
++-----------+       +-----------+
+|  Teacher  |-------|  Student  |
++-----------+       +-----------+
+| + teach() |       | + learn() |
++-----------+       +-----------+
+```
+
+**Java Program:**
+```java
+class Teacher {
+    void teach() {
+        System.out.println("Teaching");
+    }
+}
+
+class Student {
+    void learn(Teacher t) {
+        t.teach();
+    }
+
+    public static void main(String[] args) {
+        Teacher t = new Teacher();
+        Student s = new Student();
+        s.learn(t);
+    }
+}
+```
+
+**Output:** `Teaching`
+
+### Program 9: Aggregation
+
+**Aim:** To demonstrate a whole-part relationship with independent objects.
+
+**UML Diagram:**
+```text
++-------------+     ◇------ +----------+
+| Department  |             | Teacher  |
++-------------+             +----------+
+| - teacher   |             | - name   |
++-------------+             +----------+
+```
+
+**Java Program:**
+```java
+class Teacher {
+    String name;
+
+    Teacher(String name) {
+        this.name = name;
+    }
+}
+
+class Department {
+    Teacher teacher;
+
+    Department(Teacher teacher) {
+        this.teacher = teacher;
+    }
+
+    public static void main(String[] args) {
+        Teacher t = new Teacher("Ravi");
+        Department d = new Department(t);
+        System.out.println(d.teacher.name);
+    }
+}
+```
+
+**Output:** `Ravi`
+
+### Program 10: Composition
+
+**Aim:** To demonstrate object ownership.
+
+**UML Diagram:**
+```text
++-----------+     ◆------ +----------+
+|    Car    |             |  Engine  |
++-----------+             +----------+
+| - engine  |             | + start()|
++-----------+             +----------+
+```
+
+**Java Program:**
+```java
+class Engine {
+    void start() {
+        System.out.println("Engine started");
+    }
+}
+
+class Car {
+    private final Engine engine = new Engine();
+
+    void startCar() {
+        engine.start();
+    }
+
+    public static void main(String[] args) {
+        new Car().startCar();
+    }
+}
+```
+
+**Output:** `Engine started`
+
+## Conclusion
+
+These ten Java programs demonstrate fundamental OOP concepts, including classes, encapsulation, inheritance, polymorphism, abstraction, interfaces, and object relationships. The UML diagrams represent the basic structure and relationships of the classes.

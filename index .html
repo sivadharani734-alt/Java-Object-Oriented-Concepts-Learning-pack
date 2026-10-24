@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Java OOP Learning Pack</title>
+<style>
+body{font-family:Arial;margin:0;background:#edf4ff;color:#222}
+header{background:#174ea6;color:white;text-align:center;padding:25px}
+nav{background:#0b2454;padding:15px;text-align:center}
+nav a{color:white;margin:10px;text-decoration:none}
+main{max-width:900px;margin:auto;padding:15px}
+.card{background:white;padding:20px;margin:18px 0;border-radius:12px;box-shadow:0 3px 10px #ccd}
+button{background:#1756b3;color:white;border:0;padding:10px 15px;border-radius:6px;cursor:pointer;margin:5px}
+input{padding:10px;width:85%;max-width:450px}
+pre{background:#172033;color:#b8f7d4;padding:15px;white-space:pre-wrap;border-radius:8px}
+h2{color:#1756b3}
+body.dark{background:#111827;color:white}
+body.dark .card{background:#1f2937;color:white}
+body.dark h2{color:#83b5ff}
+</style>
+</head>
+<body>
+<header>
+<h1>Java OOP Learning Pack</h1>
+<p>Learn Java Object-Oriented Programming Easily!</p>
+<button onclick="document.body.classList.toggle('dark')">🌙 Dark Mode</button>
+</header>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#lessons">Lessons</a>
+<a href="#quiz">Quiz</a>
+<a href="#about">About</a>
+</nav>
+
+<main>
+<section class="card" id="home">
+<h2>Welcome!</h2>
+<p>Learn the five important concepts of Java OOP with simple definitions and programs.</p>
+<input id="search" type="text" placeholder="Search OOP concepts..." oninput="searchLessons()">
+<p id="progress">Lessons completed: 0 / 5</p>
+</section>
+
+<section id="lessons">
+<h2>Java OOP Concepts</h2>
+
+<div class="card lesson">
+<h3>1. Class and Object</h3>
+<p><b>Class:</b> A blueprint for creating objects.</p>
+<p><b>Object:</b> An instance of a class.</p>
+<pre>class Student {
+    void display() {
+        System.out.println("Hello Student");
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.display();
+    }
+}</pre>
+<p><b>Output:</b> Hello Student</p>
+<button onclick="complete(0)">Mark as Completed ✓</button>
+</div>
+
+<div class="card lesson">
+<h3>2. Inheritance</h3>
+<p>Inheritance allows one class to acquire properties and methods from another class.</p>
+<pre>class Animal {
+    void eat() {
+        System.out.println("Eating");
+    }
+}
+
+class Dog extends Animal {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.eat();
+    }
+}</pre>
+<p><b>Output:</b> Eating</p>
+<button onclick="complete(1)">Mark as Completed ✓</button>
+</div>
+
+<div class="card lesson">
+<h3>3. Polymorphism</h3>
+<p>Polymorphism means one name can have many forms. Method overloading is one example.</p>
+<pre>class Demo {
+    void show(int a) {
+        System.out.println(a);
+    }
+
+    void show(String a) {
+        System.out.println(a);
+    }
+
+    public static void main(String[] args) {
+        Demo d = new Demo();
+        d.show(10);
+        d.show("Java");
+    }
+}</pre>
+<p><b>Output:</b><br>10<br>Java</p>
+<button onclick="complete(2)">Mark as Completed ✓</button>
+</div>
+
+<div class="card lesson">
+<h3>4. Abstraction</h3>
+<p>Abstraction hides implementation details and shows essential features.</p>
+<pre>abstract class Animal {
+    abstract void sound();
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Bark");
+    }
+
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.sound();
+    }
+}</pre>
+<p><b>Output:</b> Bark</p>
+<button onclick="complete(3)">Mark as Completed ✓</button>
+</div>
+
+<div class="card lesson">
+<h3>5. Encapsulation</h3>
+<p>Encapsulation combines data and methods in one class and protects data using access modifiers.</p>
+<pre>class Student {
+    private int age = 18;
+
+    int getAge() {
+        return age;
+    }
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        System.out.println(s.getAge());
+    }
+}</pre>
+<p><b>Output:</b> 18</p>
+<button onclick="complete(4)">Mark as Completed ✓</button>
+</div>
+</section>
+
+<section class="card" id="quiz">
+<h2>Java OOP Quiz</h2>
+<p id="question"></p>
+<div id="options"></div>
+<p id="feedback"></p>
+<p id="score"></p>
+<button id="next" onclick="nextQuestion()">Next Question →</button>
+</section>
+
+<section class="card" id="about">
+<h2>About This Project</h2>
+<p>This Java OOP Learning Pack helps beginners learn Classes, Objects, Inheritance, Polymorphism, Abstraction and Encapsulation with examples and a quiz.</p>
+</section>
+</main>
+
+<script>
+let completed = [false,false,false,false,false];
+
+function complete(n) {
+  completed[n] = true;
+  document.getElementById("progress").textContent =
+    "Lessons completed: " + completed.filter(Boolean).length + " / 5";
+}
+
+function searchLessons() {
+  let value = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll(".lesson").forEach(card => {
+    card.style.display = card.textContent.toLowerCase().includes(value)
+      ? "block" : "none";
+  });
+}
+
+const questions = [
+ {q:"1. What is a class?",o:["A blueprint","A loop","A variable"],a:0},
+ {q:"2. What is an object?",o:["A package","An instance of a class","A keyword"],a:1},
+ {q:"3. Which keyword is used for inheritance?",o:["this","static","extends"],a:2},
+ {q:"4. Polymorphism means:",o:["Many forms","One variable","Data hiding"],a:0},
+ {q:"5. Which keyword supports abstraction?",o:["new","abstract","private"],a:1},
+ {q:"6. Encapsulation protects:",o:["Only loops","Only output","Data"],a:2},
+ {q:"7. Which is a Java access modifier?",o:["private","display","print"],a:0},
+ {q:"8. Which method starts a Java program?",o:["start()","main()","runCode()"],a:1},
+ {q:"9. Which keyword creates an object?",o:["class","extends","new"],a:2},
+ {q:"10. Which concept allows method overloading?",o:["Polymorphism","Inheritance","Encapsulation"],a:0}
+];
+
+let current = 0;
+let points = 0;
+let answered = false;
+
+function showQuestion() {
+  answered = false;
+  document.getElementById("feedback").textContent = "";
+  document.getElementById("next").textContent =
+    current === questions.length - 1 ? "Finish Quiz" : "Next Question →";
+  let q = questions[current];
+  document.getElementById("question").textContent = q.q;
+  document.getElementById("options").innerHTML = "";
+  q.o.forEach((option,i) => {
+    let b = document.createElement("button");
+    b.textContent = option;
+    b.onclick = () => checkAnswer(i);
+    document.getElementById("options").appendChild(b);
+  });
+  document.getElementById("score").textContent =
+    "Score: " + points + " / " + questions.length;
+}
+
+function checkAnswer(i) {
+  if (answered) return;
+  answered = true;
+  if (i === questions[current].a) {
+    points++;
+    document.getElementById("feedback").textContent = "Correct answer! 🎉";
+  } else {
+    document.getElementById("feedback").textContent =
+      "Incorrect. Correct answer: " + questions[current].o[questions[current].a];
+  }
+  document.getElementById("score").textContent =
+    "Score: " + points + " / " + questions.length;
+}
+
+function nextQuestion() {
+  if (!answered) {
+    document.getElementById("feedback").textContent =
+      "Please select an answer first.";
+    return;
+  }
+  if (current < questions.length - 1) {
+    current++;
+    showQuestion();
+  } else {
+    document.getElementById("question").textContent = "Quiz Completed! 🎉";
+    document.getElementById("options").innerHTML = "";
+    document.getElementById("feedback").textContent =
+      "Your final score: " + points + " / " + questions.length;
+    document.getElementById("next").textContent = "Restart Quiz";
+    document.getElementById("next").onclick = () => {
+      current = 0;
+      points = 0;
+      document.getElementById("next").onclick = nextQuestion;
+      showQuestion();
+    };
+  }
+}
+
+showQuestion();
+</script>
+</body>
+</html>

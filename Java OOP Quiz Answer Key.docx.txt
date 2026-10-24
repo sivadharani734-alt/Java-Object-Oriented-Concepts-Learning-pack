@@ -1,0 +1,146 @@
+# Java OOP Learning Pack
+## 15-Question Quiz and Answer Key
+
+**Objective:** To test students' understanding of Java Object-Oriented Programming concepts.
+
+**Instructions:** Select one correct answer for each question. Each question carries 1 mark. Total marks: 15.
+
+### Questions
+
+**1. What is a class in Java?**
+
+A) A loop  
+B) A blueprint for creating objects  
+C) A data type only  
+D) An operator  
+
+**2. What is an object?**
+
+A) An instance of a class  
+B) A package  
+C) A keyword  
+D) A method name  
+
+**3. Which concept restricts direct access to data?**
+
+A) Inheritance  
+B) Polymorphism  
+C) Encapsulation  
+D) Association  
+
+**4. Which keyword is used to inherit a class in Java?**
+
+A) implements  
+B) extends  
+C) inherits  
+D) super  
+
+**5. What is method overloading?**
+
+A) Using different method names only  
+B) Defining methods with the same name and different parameter lists  
+C) Deleting a method  
+D) Hiding a class  
+
+**6. What is method overriding?**
+
+A) Redefining an inherited instance method with a compatible signature  
+B) Creating a constructor only  
+C) Declaring a variable  
+D) Importing a package  
+
+**7. Which keyword declares an abstract class?**
+
+A) static  
+B) private  
+C) abstract  
+D) final  
+
+**8. Which keyword is used to implement an interface?**
+
+A) extends  
+B) implements  
+C) interface  
+D) import  
+
+**9. Which keyword refers to the current object?**
+
+A) super  
+B) this  
+C) static  
+D) final  
+
+**10. Which keyword refers to accessible members of a parent class?**
+
+A) this  
+B) super  
+C) new  
+D) void  
+
+**11. Which access modifier restricts access to the declaring class?**
+
+A) public  
+B) protected  
+C) private  
+D) default  
+
+**12. What is a constructor used for?**
+
+A) Initialising a new object  
+B) Ending a program  
+C) Importing a package  
+D) Repeating a loop  
+
+**13. Which concept allows a parent reference to refer to a subclass object and use its overridden method?**
+
+A) Encapsulation  
+B) Runtime polymorphism  
+C) Aggregation  
+D) Compilation  
+
+**14. In UML, which diamond represents composition?**
+
+A) Hollow diamond  
+B) Filled diamond  
+C) Circle  
+D) Triangle  
+
+**15. Which relationship allows the related objects to exist independently?**
+
+A) Composition always  
+B) Association  
+C) Constructor  
+D) Method overloading  
+
+---
+
+## Answer Key
+
+| Question | Correct Answer |
+|---|---|
+| 1 | B — Blueprint for creating objects |
+| 2 | A — Instance of a class |
+| 3 | C — Encapsulation |
+| 4 | B — extends |
+| 5 | B — Same name, different parameter lists |
+| 6 | A — Redefining an inherited instance method |
+| 7 | C — abstract |
+| 8 | B — implements |
+| 9 | B — this |
+| 10 | B — super |
+| 11 | C — private |
+| 12 | A — Initialising a new object |
+| 13 | B — Runtime polymorphism |
+| 14 | B — Filled diamond |
+| 15 | B — Association |
+
+## Scoring Guide
+
+- **13–15:** Excellent understanding
+- **10–12:** Good understanding
+- **7–9:** Keep practising
+- **0–6:** Review the concepts and try again
+
+## Conclusion
+
+This quiz evaluates the main Java OOP concepts and helps identify topics that need more practice.

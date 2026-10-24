@@ -1,0 +1,100 @@
+# Research Report: Java Object-Oriented Programming (OOP)
+
+## 1. Introduction
+
+Java is a popular programming language used to develop web applications, desktop software, mobile applications, and enterprise systems. Java supports Object-Oriented Programming (OOP), which helps developers organise programs using classes and objects.
+
+The purpose of this research is to understand the main OOP concepts in Java and explore how AI tools can support learning and programming practice.
+
+## 2. Research Objectives
+
+- To understand the fundamental concepts of Java OOP.
+- To identify real-life applications of OOP.
+- To use AI tools to support learning.
+- To develop simple Java programs and practice exercises.
+- To verify AI-generated information using reliable sources.
+
+## 3. Research Methodology
+
+Two AI tools, ChatGPT and Google Gemini, can be used to research Java OOP concepts, generate examples, and explain difficult topics in simple English.
+
+The information should be compared with official Java documentation. AI-generated code must be compiled and tested before it is accepted as correct.
+
+## 4. Main Findings
+
+### 4.1 Classes and Objects
+
+A class is a blueprint for creating objects. An object is an instance of a class.
+
+Example: A `Student` class can represent students with attributes such as name and roll number.
+
+### 4.2 Encapsulation
+
+Encapsulation combines data and methods within a class and controls access to internal data using access modifiers.
+
+Example: A bank account can use private balance data and public methods to manage transactions.
+
+### 4.3 Inheritance
+
+Inheritance allows one class to acquire accessible properties and methods from another class.
+
+Example: A `Car` class can inherit common features from a `Vehicle` class.
+
+### 4.4 Polymorphism
+
+Polymorphism allows the same method name or interface to support different behaviours.
+
+Java supports compile-time polymorphism through method overloading and runtime polymorphism through method overriding.
+
+### 4.5 Abstraction
+
+Abstraction hides implementation details and exposes essential functionality. Java supports abstraction through abstract classes and interfaces.
+
+### 4.6 Association
+
+Association represents a relationship between separate classes or objects.
+
+Example: A teacher teaches students.
+
+### 4.7 Aggregation
+
+Aggregation is a whole-part relationship in which the parts can exist independently of the whole.
+
+Example: A department has teachers, and the teachers can exist independently of that department.
+
+### 4.8 Composition
+
+Composition is a strong whole-part relationship in which a component's lifecycle is closely tied to its owning object.
+
+Example: A document may contain pages that are managed as part of that document.
+
+## 5. Benefits of Java OOP
+
+- Improves code organisation and readability.
+- Encourages code reuse.
+- Makes large programs easier to maintain.
+- Supports modular software design.
+- Helps represent real-world relationships in software.
+
+## 6. Limitations and Challenges
+
+- Beginners may find OOP concepts difficult to understand initially.
+- Poor class design can make software unnecessarily complex.
+- Inheritance can create tight dependencies when used incorrectly.
+- AI-generated explanations or code can contain errors and must be verified.
+
+## 7. Role of AI Tools
+
+ChatGPT and Google Gemini can help explain OOP concepts, suggest Java examples, generate practice questions, and identify possible coding errors. However, their outputs should be checked against official documentation and tested independently.
+
+## 8. Conclusion
+
+Java OOP concepts provide a structured approach to software development. Understanding classes, objects, encapsulation, inheritance, polymorphism, abstraction, association, aggregation, and composition helps students design maintainable applications. Combining AI-assisted learning with reliable sources and practical testing can improve understanding.
+
+## 9. References
+
+1. Oracle, The Java Tutorials — Object-Oriented Programming Concepts: https://docs.oracle.com/javase/tutorial/java/concepts/
+2. Oracle, Java Language Documentation: https://docs.oracle.com/en/java/
+3. OpenJDK, Official Java Development Project: https://openjdk.org/
+
+**Research note:** Record the actual prompts and outputs from ChatGPT and Gemini, and verify technical claims against the references above before submitting the report.

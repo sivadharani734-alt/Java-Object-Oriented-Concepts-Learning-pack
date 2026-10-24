@@ -1,0 +1,41 @@
+
+def generate_exercise():
+    title = input("Enter exercise title: ")
+    concept = input("Enter OOP concept: ")
+    difficulty = input("Enter difficulty level: ")
+    problem = input("Enter problem statement: ")
+
+    template = f"""
+JAVA OOP EXERCISE
+
+Title: {title}
+OOP Concept: {concept}
+Difficulty: {difficulty}
+
+Problem Statement:
+{problem}
+
+Algorithm:
+1.
+2.
+3.
+
+Java Program:
+[Write your code here]
+
+Sample Output:
+[Enter expected output]
+
+Conclusion:
+[Write what you learned]
+"""
+
+    filename = "Java_OOP_Exercise_Template.txt"
+
+    with open(filename, "w", encoding="utf-8") as file:
+        file.write(template)
+
+    print(f"\nTemplate created successfully: {filename}")
+
+
+generate_exercise()
